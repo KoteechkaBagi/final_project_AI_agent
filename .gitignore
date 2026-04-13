@@ -7,9 +7,17 @@ node_modules/
 # Build output
 dist/
 
+# Generated autotest files (regenerated at runtime by the pipeline)
+autotests/src/
+autotests/pages/
+autotests/test-results/
+autotests/allure-results/
+autotests/allure-report/
+autotests/playwright-report/
+
 # Test results
 test-results/
-autotests/test-results/
+results/
 
 # IDE
 .vscode/

@@ -4,5 +4,9 @@
   "type": "module",
   "scripts": {
     "test": "playwright test"
+  },
+  "devDependencies": {
+    "allure-playwright": "^2.15.0",
+    "allure-commandline": "^2.29.0"
   }
 }
