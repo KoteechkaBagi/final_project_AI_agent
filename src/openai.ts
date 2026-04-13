@@ -6,9 +6,11 @@ if (!apiKey) {
   throw new Error("DEEPSEEK_API_KEY environment variable is required.");
 }
 
+const DEEPSEEK_BASE_URL = "https://api.deepseek.com/v1";
+
 const client = new OpenAI({
   apiKey,
-  baseURL: process.env.DEEPSEEK_BASE_URL || "https://api.deepseek.com/v1"
+  baseURL: DEEPSEEK_BASE_URL
 });
 
 export async function generateText(prompt: string): Promise<string> {
