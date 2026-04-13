@@ -6,12 +6,11 @@ export default defineConfig({
   timeout: 30000,
   reporter: [
     ['list'],
-    ['allure-playwright', { outputFolder: 'allure-results' }],
+    ['allure-playwright'],
   ],
   use: {
     baseURL: 'https://worldchess.com',
     headless: true,
     screenshot: 'only-on-failure',
-    trace: 'on-first-retry',
   },
 });
