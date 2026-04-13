@@ -6,7 +6,7 @@
     "test": "playwright test"
   },
   "devDependencies": {
-    "allure-playwright": "^2.15.0",
-    "allure-commandline": "^2.29.0"
+    "allure-commandline": "^2.38.1",
+    "allure-playwright": "^3.7.1"
   }
 }
