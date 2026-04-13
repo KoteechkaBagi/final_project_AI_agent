@@ -27,8 +27,14 @@ jobs:
         run: npm ci
         working-directory: autotests
 
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('autotests/package-lock.json') }}
+
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps
+        run: npx playwright install --with-deps chromium
         working-directory: autotests
 
       - name: Create .env file
