@@ -44,6 +44,19 @@ jobs:
         run: npm run dev
         continue-on-error: true
 
+      - name: Upload pipeline results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-results
+          path: results/
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Ensure allure-results directory exists
+        if: always()
+        run: mkdir -p autotests/allure-results
+
       - name: Generate Allure report
         if: always()
         run: |
