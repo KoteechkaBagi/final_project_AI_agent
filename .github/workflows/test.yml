@@ -41,45 +41,20 @@ jobs:
         run: echo "DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY }}" > .env
 
       - name: Run agent pipeline
-        run: |
-          mkdir -p results
-          npm run dev 2>&1 | tee results/pipeline_output.txt
+        run: npm run dev
         continue-on-error: true
 
-      - name: Ensure results directories exist
+      - name: Generate Allure report
         if: always()
         run: |
-          mkdir -p results
-          mkdir -p autotests/allure-results
-          mkdir -p autotests/test-results
-          mkdir -p autotests/src
-          mkdir -p autotests/pages
+          cd autotests
+          npx allure generate allure-results -o allure-report --clean || true
 
-      - name: Upload Allure results
+      - name: Upload Allure report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: allure-results
-          path: autotests/allure-results/
-          retention-days: 30
-          if-no-files-found: ignore
-
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results
-          path: |
-            autotests/test-results/
-            results/
-          retention-days: 30
-          if-no-files-found: ignore
-
-      - name: Upload pipeline results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pipeline-results
-          path: results/
+          name: allure-report
+          path: autotests/allure-report/
           retention-days: 30
           if-no-files-found: ignore

@@ -60,7 +60,7 @@ export async function runTests(autotestsDir: string): Promise<{ output: string; 
   let testOutput = "";
   let testErrors = "";
   try {
-    const { stdout, stderr } = await execAsync("npx playwright test --reporter=list", {
+    const { stdout, stderr } = await execAsync("npx playwright test", {
       cwd: autotestsDir,
       env: { ...process.env, FORCE_COLOR: "0" }
     });
