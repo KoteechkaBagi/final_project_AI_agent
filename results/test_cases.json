@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "title": "Проверка загрузки главной страницы неавторизованным пользователем",
+    "description": null,
+    "preconditions": "Пользователь не авторизован в системе. Браузер открыт.",
+    "postconditions": null,
+    "priority": "medium",
+    "severity": "normal",
+    "type": "functional",
+    "behavior": "positive",
+    "automation": "is-not-automated",
+    "status": "actual",
+    "is_flaky": "no",
+    "layer": "e2e",
+    "milestone": null,
+    "custom_fields": [],
+    "steps_type": "classic",
+    "steps": [
+      {
+        "position": 1,
+        "action": "Перейти на главную страницу платформы worldchess.com",
+        "expected_result": "URL страницы совпадает с ожидаемым. Страница полностью загружается.",
+        "data": "",
+        "steps": []
+      }
+    ],
+    "tags": [],
+    "params": [],
+    "is_muted": "no"
+  },
+  {
+    "id": 2,
+    "title": "Проверка открытия попапа регистрации с главной страницы",
+    "description": null,
+    "preconditions": "Пользователь не авторизован. Открыта главная страница worldchess.com.",
+    "postconditions": null,
+    "priority": "medium",
+    "severity": "normal",
+    "type": "functional",
+    "behavior": "positive",
+    "automation": "is-not-automated",
+    "status": "actual",
+    "is_flaky": "no",
+    "layer": "e2e",
+    "milestone": null,
+    "custom_fields": [],
+    "steps_type": "classic",
+    "steps": [
+      {
+        "position": 1,
+        "action": "Кликнуть на кнопку 'Register for free'",
+        "expected_result": "Открывается попап (модальное окно), содержащий текст 'Sign up'.",
+        "data": "",
+        "steps": []
+      }
+    ],
+    "tags": [],
+    "params": [],
+    "is_muted": "no"
+  },
+  {
+    "id": 3,
+    "title": "Проверка перехода в раздел турниров через меню",
+    "description": null,
+    "preconditions": "Пользователь находится на любой странице платформы worldchess.com. Меню навигации доступно.",
+    "postconditions": null,
+    "priority": "medium",
+    "severity": "normal",
+    "type": "functional",
+    "behavior": "positive",
+    "automation": "is-not-automated",
+    "status": "actual",
+    "is_flaky": "no",
+    "layer": "e2e",
+    "milestone": null,
+    "custom_fields": [],
+    "steps_type": "classic",
+    "steps": [
+      {
+        "position": 1,
+        "action": "Кликнуть на ссылку 'tournaments' в меню навигации",
+        "expected_result": "Происходит переход на страницу Tournaments. URL страницы совпадает с ожидаемым. На странице присутствует текст 'Tournaments today'.",
+        "data": "",
+        "steps": []
+      }
+    ],
+    "tags": [],
+    "params": [],
+    "is_muted": "no"
+  },
+  {
+    "id": 4,
+    "title": "Проверка отображения кнопки Join при клике на турнирную карточку",
+    "description": null,
+    "preconditions": "Пользователь находится на странице Tournaments.",
+    "postconditions": null,
+    "priority": "medium",
+    "severity": "normal",
+    "type": "functional",
+    "behavior": "positive",
+    "automation": "is-not-automated",
+    "status": "actual",
+    "is_flaky": "no",
+    "layer": "e2e",
+    "milestone": null,
+    "custom_fields": [],
+    "steps_type": "classic",
+    "steps": [
+      {
+        "position": 1,
+        "action": "Кликнуть по любой доступной турнирной карточке на странице",
+        "expected_result": "На странице отображается кнопка 'Join'.",
+        "data": "",
+        "steps": []
+      }
+    ],
+    "tags": [],
+    "params": [],
+    "is_muted": "no"
+  },
+  {
+    "id": 5,
+    "title": "Проверка отображения элементов на странице партии для неавторизованного пользователя",
+    "description": null,
+    "preconditions": "Пользователь не авторизован в системе. Браузер открыт.",
+    "postconditions": null,
+    "priority": "medium",
+    "severity": "normal",
+    "type": "functional",
+    "behavior": "positive",
+    "automation": "is-not-automated",
+    "status": "actual",
+    "is_flaky": "no",
+    "layer": "e2e",
+    "milestone": null,
+    "custom_fields": [],
+    "steps_type": "classic",
+    "steps": [
+      {
+        "position": 1,
+        "action": "Перейти на страницу партии по URL: game/1fca7de9-7c1f-473a-9ae9-9a402b69c256",
+        "expected_result": "На странице отображается кнопка 'Become pro'. На странице отображается кнопка 'Flip board'.",
+        "data": "",
+        "steps": []
+      }
+    ],
+    "tags": [],
+    "params": [],
+    "is_muted": "no"
+  },
+  {
+    "id": 6,
+    "title": "Проверка открытия попапа Become a pro со страницы партии",
+    "description": null,
+    "preconditions": "Пользователь не авторизован. Открыта страница партии game/1fca7de9-7c1f-473a-9ae9-9a402b69c256.",
+    "postconditions": null,
+    "priority": "medium",
+    "severity": "normal",
+    "type": "functional",
+    "behavior": "positive",
+    "automation": "is-not-automated",
+    "status": "actual",
+    "is_flaky": "no",
+    "layer": "e2e",
+    "milestone": null,
+    "custom_fields": [],
+    "steps_type": "classic",
+    "steps": [
+      {
+        "position": 1,
+        "action": "Кликнуть на кнопку 'Become pro'",
+        "expected_result": "Открывается попап (модальное окно), содержащий текст 'Become a pro'.",
+        "data": "",
+        "steps": []
+      }
+    ],
+    "tags": [],
+    "params": [],
+    "is_muted": "no"
+  },
+  {
+    "id": 7,
+    "title": "Проверка действия кнопки Flip board на странице партии",
+    "description": null,
+    "preconditions": "Пользователь не авторизован. Открыта страница партии game/1fca7de9-7c1f-473a-9ae9-9a402b69c256. Имена игроков отображаются в исходном порядке.",
+    "postconditions": null,
+    "priority": "medium",
+    "severity": "normal",
+    "type": "functional",
+    "behavior": "positive",
+    "automation": "is-not-automated",
+    "status": "actual",
+    "is_flaky": "no",
+    "layer": "e2e",
+    "milestone": null,
+    "custom_fields": [],
+    "steps_type": "classic",
+    "steps": [
+      {
+        "position": 1,
+        "action": "Кликнуть на кнопку 'Flip board'",
+        "expected_result": "Имена игроков на доске меняются местами.",
+        "data": "",
+        "steps": []
+      }
+    ],
+    "tags": [],
+    "params": [],
+    "is_muted": "no"
+  }
+]

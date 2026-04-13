@@ -1,0 +1,8 @@
+{
+  "name": "autotests",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test"
+  }
+}

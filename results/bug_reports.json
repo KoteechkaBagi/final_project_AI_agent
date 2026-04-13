@@ -1,0 +1,28 @@
+[
+  {
+    "title": "[CA-7] Кнопка Flip board недоступна для клика из-за перекрывающего элемента",
+    "description": "При попытке кликнуть на кнопку 'Flip board' на странице партии возникает ошибка, так как элемент перекрыт другим элементом с классом '_component_content_inner_ebvj3_123'. Тест завершается с таймаутом 30 секунд.",
+    "steps_to_reproduce": [
+      "1. Открыть страницу партии (GamePage)",
+      "2. Найти кнопку с текстом 'Flip board'",
+      "3. Попытаться кликнуть на кнопку"
+    ],
+    "expected_result": "Кнопка 'Flip board' кликабельна, клик выполняется успешно",
+    "actual_result": "Кнопка перекрыта элементом <div class='_component_content_inner_ebvj3_123'>, который перехватывает события указателя. Клик не выполняется, тест падает с таймаутом и ошибкой 'Target page, context or browser has been closed'",
+    "severity": "High",
+    "priority": "High"
+  },
+  {
+    "title": "[CA-3] Нарушение strict mode при поиске элемента 'Tournaments today'",
+    "description": "При переходе в раздел турниров через меню и попытке найти элемент с текстом 'Tournaments today' локатор находит 2 элемента вместо одного, что нарушает strict mode Playwright",
+    "steps_to_reproduce": [
+      "1. Открыть главную страницу",
+      "2. Перейти в раздел турниров через меню",
+      "3. Попытаться найти элемент с текстом 'Tournaments today'"
+    ],
+    "expected_result": "Локатор 'text=Tournaments today' находит один видимый элемент",
+    "actual_result": "Локатор находит 2 элемента: 1) <p class='sc-dlfUjV hBLySG'>tournaments today</p> и 2) <a href='/tournaments'> с текстом 'More upcoming tournaments'. Ошибка strict mode violation",
+    "severity": "Medium",
+    "priority": "Medium"
+  }
+]
