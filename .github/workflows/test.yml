@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Install autotest dependencies
-        run: npm ci
+        run: npm ci --include=dev
         working-directory: autotests
 
       - name: Cache Playwright browsers
